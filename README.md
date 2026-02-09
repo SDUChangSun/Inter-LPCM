@@ -1,29 +1,11 @@
 # Inter-LPCM
-This repository contains the official research code for a learning-based point cloud compression framework. The proposed system integrates point cloud registration, deep neural networks, and entropy coding to efficiently compress 3D point clouds. The code is intended for testing and experimental evaluation purposes only.
 
-## Repository Structure
+Inter-LPCM is the official research code for a **learning-based point cloud compression framework**.  
+The system integrates **point cloud registration**, **deep neural networks**, and **entropy coding** to efficiently compress 3D point clouds.  
 
-model.py # predictive model for theta
+> ⚠️ This code is for **testing and experimental evaluation only**.
 
-r_model.py # predictive model for r
-
-r_entropy_model.py # entropy model for r
-
-phi_entropy_model.py # entropy model for phi
-
-s_r2.py # point cloud registration module
-
-get_t.py # get transformation matrix t
-
-nearpoint.py # nearest-point processing utilities
-
-dataprepare/ # dataset preparation utilities
-
-data.py # dataset preparation and evaluation metrics
-
-requirements.txt # python dependencies
-
-README.md # documentation
+---
 
 ## Dependencies
 
@@ -35,33 +17,39 @@ README.md # documentation
 - deepCABAC
 - torchac
 
+---
+
 ## Environment Setup
 
-It is recommended to use a virtual environment.
+It is recommended to use a **virtual environment**:
 
 ```bash
-# create and activate conda environment
+# Create and activate conda environment
 conda create -n pointcloud python=3.8
 conda activate pointcloud
 
-# install PyTorch with CUDA 11.3 support
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+# Install PyTorch with CUDA 11.3 support
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 \
+    --extra-index-url https://download.pytorch.org/whl/cu113
+```
 
 Note on deepCABAC
+deepCABAC may require manual installation and compilation depending on your environment.
+Refer to the official repository for details: https://github.com/fraunhoferhhi/deepCABAC
 
-The deepCABAC library may require manual installation and compilation depending on your environment. Please refer to the official repository for details.
+## Testing
 
-https://github.com/fraunhoferhhi/deepCABAC
+Run test.py to evaluate rate-distortion (RD) performance on the SemanticKITTI dataset.
+Supported quantization parameters: Qs = 4, 15, 66 , has set in the code.
 
-Testing
 
-You can directly run test.py to evaluate the rate-distortion (RD) performance on the SemanticKITTI dataset with quantization parameters Qs = 4, 15, 66.
-
-The test data and corresponding transformation matrices are provided in the following directories.
+Test data and transformation matrices are located in:
 
 ./test
 ./test_matrix
 
-Remarks
+## Remarks
 
-This code is provided for research testing only. The complete codebase, including the training pipeline and entropy model with more bitrate, will be released after the paper is published.
+This code is provided for research testing only.
+
+The full codebase, including the training pipeline and entropy model with more bitrate, will be released after the paper is published.
