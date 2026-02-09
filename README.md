@@ -64,4 +64,4 @@ The test data and corresponding transformation matrices are provided in the foll
 
 Remarks
 
-This code is provided for research testing only. Training procedures and full datasets are not included. The complete codebase, including the training pipeline and entropy model with more bitrate, will be released after the paper is published.
+This code is provided for research testing only. The complete codebase, including the training pipeline and entropy model with more bitrate, will be released after the paper is published.
