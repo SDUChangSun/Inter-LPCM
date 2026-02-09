@@ -4,16 +4,27 @@ This repository contains the official research code for a learning-based point c
 ## Repository Structure
 
 model.py # predictive model for theta
+
 r_model.py # predictive model for r
+
 r_entropy_model.py # entropy model for r
+
 phi_entropy_model.py # entropy model for phi
+
 s_r2.py # point cloud registration module
+
 get_t.py # get transformation matrix t
+
 nearpoint.py # nearest-point processing utilities
+
 dataprepare/ # dataset preparation utilities
+
 data.py # dataset preparation and evaluation metrics
+
 requirements.txt # python dependencies
+
 README.md # documentation
+
 ## Dependencies
 
 - Python 3.7
@@ -53,4 +64,4 @@ The test data and corresponding transformation matrices are provided in the foll
 
 Remarks
 
-This code is provided for research testing only. Training procedures and full datasets are not included. The complete codebase, including the training pipeline, will be released after the paper is published.
+This code is provided for research testing only. Training procedures and full datasets are not included. The complete codebase, including the training pipeline and entropy model with more bitrate, will be released after the paper is published.
